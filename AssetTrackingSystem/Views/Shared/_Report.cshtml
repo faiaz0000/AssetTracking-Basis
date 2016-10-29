@@ -1,0 +1,11 @@
+﻿@using ReportViewerForMvc
+
+<div class="row">
+
+    <div class="col-md-12">
+        @if (ViewBag.ReportViewer != null)
+        {
+            @Html.ReportViewer(ViewBag.ReportViewer as Microsoft.Reporting.WebForms.ReportViewer, new { @class = "report" })
+        }
+    </div>
+</div>

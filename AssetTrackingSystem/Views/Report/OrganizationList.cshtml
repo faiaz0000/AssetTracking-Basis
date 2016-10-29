@@ -1,0 +1,47 @@
+﻿@using ReportViewerForMvc
+@model AssetTrackingSystem.Controllers.OrganizationListSearchCriteriaVM
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>title</h2>
+
+@using (Ajax.BeginForm("OrganizationList", new AjaxOptions(){UpdateTargetId = "report", InsertionMode = InsertionMode.Replace, HttpMethod = "POST"}))
+{
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(m => m.Code)
+                @Html.TextBoxFor(m => m.Code)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <input type="submit" value="Show" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+
+}
+
+<div id="report">
+
+    
+
+   
+
+
+
+
+</div>
+
+
